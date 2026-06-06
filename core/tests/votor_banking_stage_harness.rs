@@ -232,6 +232,7 @@ async fn measure_banking_stage_against_votor_timing() {
 
     // ── 4. Measurement loop ───────────────────────────────────────────────
 
+    #[allow(dead_code)]
     struct RoundResult {
         idx:           usize,
         latency:       Duration,
@@ -246,7 +247,7 @@ async fn measure_banking_stage_against_votor_timing() {
 
     let mut results: Vec<RoundResult> = Vec::with_capacity(N_ROUNDS);
 
-    let mut senders: Vec<Keypair> = (0..N_ROUNDS * TXS_PER_ROUND).map(|_| Keypair::new()).collect();
+    let senders: Vec<Keypair> = (0..N_ROUNDS * TXS_PER_ROUND).map(|_| Keypair::new()).collect();
     
     let funding_blockhash = bank.last_blockhash();
     let funding_txs: Vec<_> = senders.iter()
