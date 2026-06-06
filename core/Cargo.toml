@@ -215,6 +215,8 @@ solana-vote-program = { path = "../programs/vote", features = ["agave-unstable-a
 spl-memo-interface = { workspace = true }
 static_assertions = { workspace = true }
 test-case = { workspace = true }
+console-subscriber = "0.5"
+tracing = "0.1"
 
 [target.'cfg(not(any(target_env = "msvc", target_os = "freebsd")))'.dev-dependencies]
 jemallocator = { workspace = true }

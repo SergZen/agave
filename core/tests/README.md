@@ -1,7 +1,7 @@
 # Votor Timing Measurement Harness for Agave BankingStage
 
 [![rust](https://img.shields.io/badge/rust-1.75+-blue.svg)](https://www.rust-lang.org/)
-[![agave](https://img.shields.io/badge/agave-orange.svg)](https://github.com/anza-xyz/agave)
+[![agave](https://img.shields.io/badge/agave-0.4.1-orange.svg)](https://github.com/anza-xyz/agave)
 
 
 ---
@@ -248,9 +248,8 @@ Terminal 2:
 ```bash
 RUSTFLAGS="--cfg tokio_unstable" \
   cargo test -p solana-core \
-    --features tokio-console \
     --test votor_banking_stage_harness \
-  -- --nocapture --test-threads=1
+  -- --nocapture
 ```
 
 The harness pauses for 60 seconds to allow attachment.
